@@ -11,24 +11,12 @@ import Reminder from "./components/Reminder";
 import TransactionList from "./components/TransactionList";
 
 function App() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      <Navbar />
-      <div className="flex flex-1 p-4">
-        <main className="flex-1">
-          <Dashboard />
-          <AddTransaction />
-          <TransactionList />
-          <FinanceChart />
-          <FinancialGoal />
-          <CSVUploader />
-          <Reminder />
-        </main>
-      </div>
-      <Login />
 
-    </div>
-  );
-}
+	return (
+		<div className="min-h-screen bg-gray-100 flex justify-center items-center">
+			<Dashboard />
+		</div>
+	);
+
 
 export default App;

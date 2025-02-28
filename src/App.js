@@ -26,6 +26,7 @@ function App() {
         </main>
       </div>
       <Login />
+
     </div>
   );
 }

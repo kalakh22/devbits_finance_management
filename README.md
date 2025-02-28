@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# devbits_finance_management
+=======
+=======
+>>>>>>> bfa19f9fbfdc028a0833f6d2b45de88900d936ff
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<<<<<<< HEAD
+>>>>>>> bfa19f9 (frontend)
+=======
+>>>>>>> bfa19f9fbfdc028a0833f6d2b45de88900d936ff

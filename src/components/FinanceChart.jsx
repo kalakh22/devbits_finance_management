@@ -1,22 +1,28 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
-const data = [
-	{ month: "Jan", income: 5000, expenses: 3000 },
-	{ month: "Feb", income: 6000, expenses: 3500 },
-	{ month: "Mar", income: 5500, expenses: 4000 },
-];
+const groupByMonth = (data) => {
+	return data.reduce((acc, { date, amount, type }) => {
+		const month = date.slice(0, 7); // Extract YYYY-MM
 
-const FinanceChart = () => {
+		if (!acc[month]) acc[month] = { month, income: 0, savings: 0, expense: 0 };
+
+		acc[month][type] += amount;
+		return acc;
+	}, {});
+};
+
+const FinanceChart = ({ transactions }) => {
 	return (
 		<div className="w-full">
 			<ResponsiveContainer width="100%" height={300}>
-				<BarChart data={data}>
+				<BarChart data={Object.values(groupByMonth(transactions))}>
 					<XAxis dataKey="month" />
 					<YAxis />
 					<Tooltip />
 					<Legend />
-					<Bar dataKey="income" fill="#4CAF50" />
-					<Bar dataKey="expenses" fill="#F44336" />
+					<Bar dataKey="income" fill="green" />
+					<Bar dataKey="expense" fill="red" />
+					<Bar dataKey="savings" fill="purple" />
 				</BarChart>
 			</ResponsiveContainer>
 		</div>
